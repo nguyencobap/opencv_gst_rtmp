@@ -2,9 +2,9 @@ import gi
 gi.require_version('Gst', '1.0')
 from gi.repository import Gst
 
-from opencv_gst_rtmp.base.opencv_gst_rtmp import OpenCVGSTRTMP
+from ..base.opencv_gst_rtmp import OpenCVGSTRTMP
 
-from opencv_gst_rtmp.config import logging_config
+from ..config import logging_config
 import logging
 logger = logging.getLogger(__name__)
 

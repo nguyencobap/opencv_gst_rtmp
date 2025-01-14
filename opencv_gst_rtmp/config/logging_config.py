@@ -1,5 +1,5 @@
 import logging.config
-from opencv_gst_rtmp.config.config import Config
+from .config import Config
 config = Config()
 logging_schema = {
     # Always 1. Schema versioning may be added in a future release of logging

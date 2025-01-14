@@ -4,12 +4,12 @@ from gi.repository import Gst
 
 from abc import abstractmethod
 
-from opencv_gst_rtmp.exception.element_exception import ElementNotFoundException
-from opencv_gst_rtmp.base.gst_base import GstBase
+from ..exception.element_exception import ElementNotFoundException
+from ..base.gst_base import GstBase
 
-from opencv_gst_rtmp.utils.gst_utils import GstUtilities
+from ..utils.gst_utils import GstUtilities
 
-from opencv_gst_rtmp.config import logging_config
+from ..config import logging_config
 import logging
 logger = logging.getLogger(__name__)
 

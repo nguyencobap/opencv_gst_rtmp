@@ -5,11 +5,11 @@ from gi.repository import Gst, GLib
 from abc import ABC, abstractmethod
 import gi
 import threading
-from opencv_gst_rtmp.utils.thread_utils import ThreadUtilities
+from ..utils.thread_utils import ThreadUtilities
 
 gi.require_version('Gst', '1.0')
 
-from opencv_gst_rtmp.config import logging_config
+from ..config import logging_config
 import logging
 logger = logging.getLogger(__name__)
 
