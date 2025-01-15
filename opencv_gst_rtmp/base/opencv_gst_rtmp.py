@@ -52,7 +52,7 @@ class OpenCVGSTRTMP(GstBase):
             self.videoconvert: str = f'{gpu_videoconvert_element_name} ! video/x-raw(memory:NVMM),format=NV12'
 
             if GstUtilities.is_element_exist(element_name='nvv4l2h264enc'):
-                self.encoder: str = 'nvv4l2h264enc'
+                self.encoder: str = 'nvv4l2h264enc idrinterval=1'
             else:
                 raise ElementNotFoundException(element_name=self.encoder)
 
