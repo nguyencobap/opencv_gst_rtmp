@@ -6,7 +6,7 @@ long_description = io.open("README.md", encoding="utf-8").read()
 print(find_packages())
 setup(
     name='opencv_gst_rtmp',
-    version='0.1.0',    
+    version='0.1.1',    
     description='Push opencv frame to rtmp server using gstreamer',
     url='https://github.com/nguyencobap/opencv_gst_rtmp',
     author='Nguyen Hai Nguyen',

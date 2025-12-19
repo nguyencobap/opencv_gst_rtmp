@@ -44,4 +44,4 @@ Build:
 
 Install:
 
-`python3 -m pip install build/opencv_gst_rtmp-0.1.0-py3-none-any.whl`
+`python3 -m pip install build/opencv_gst_rtmp-0.1.1-py3-none-any.whl`
