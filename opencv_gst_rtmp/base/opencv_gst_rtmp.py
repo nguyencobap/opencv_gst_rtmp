@@ -9,10 +9,9 @@ from ..base.gst_base import GstBase
 
 from ..utils.gst_utils import GstUtilities
 
-from ..config import logging_config
-import logging
-logger = logging.getLogger(__name__)
-
+from ..config.logging_config import LogConfig
+log_config = LogConfig(__name__)
+logger = log_config.logger
 
 class OpenCVGSTRTMP(GstBase):
     width: int
@@ -77,7 +76,7 @@ class OpenCVGSTRTMP(GstBase):
             f'! {self.queue} ' \
             f'! {self.rtmpsink} '
 
-        logger.debug(f"launch_string = {self.launch_string}")
+        logger.info(f"launch_string = {self.launch_string}")
         self.pipeline = Gst.parse_launch(self.launch_string)
 
         appsrc = self.pipeline.get_child_by_name("source")

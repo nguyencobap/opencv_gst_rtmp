@@ -9,9 +9,9 @@ from ..utils.thread_utils import ThreadUtilities
 
 gi.require_version('Gst', '1.0')
 
-from ..config import logging_config
-import logging
-logger = logging.getLogger(__name__)
+from ..config.logging_config import LogConfig
+log_config = LogConfig(__name__)
+logger = log_config.logger
 
 class GstBase(ABC):
     pipeline: Gst.Pipeline = None

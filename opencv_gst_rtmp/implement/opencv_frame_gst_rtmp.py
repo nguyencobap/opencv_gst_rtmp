@@ -4,9 +4,9 @@ from gi.repository import Gst
 
 from ..base.opencv_gst_rtmp import OpenCVGSTRTMP
 
-from ..config import logging_config
-import logging
-logger = logging.getLogger(__name__)
+from ..config.logging_config import LogConfig
+log_config = LogConfig(__name__)
+logger = log_config.logger
 
 class OpenCVFrameGSTRTMP(OpenCVGSTRTMP):
     def __init__(self, rtmp_url: str, width: int, height: int, fps: int, channel: int = 3, use_gpu: bool = False):
