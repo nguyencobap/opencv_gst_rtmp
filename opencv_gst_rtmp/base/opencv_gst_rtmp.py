@@ -64,7 +64,7 @@ class OpenCVGSTRTMP(GstBase):
         self.queue = 'queue'
         self.rtmpsink = f'rtmpsink location={self.rtmp_url}'
 
-        self.launch_string = 'appsrc name=source ' \
+        self.launch_string = 'appsrc format=time name=source ' \
             f'caps=video/x-raw,format={self.src_format},width={self.width},height={self.height},framerate={self.fps}/1 ' \
             f'! {self.videoconvert} ' \
             f'! {self.queue} ' \
