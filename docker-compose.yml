@@ -1,0 +1,19 @@
+version: "3.9"
+
+x-common-settings: &common_settings
+  privileged: true
+  logging:
+    options:
+      max-size: "2048m"
+
+services:
+  opencv_gst:
+    <<: *common_settings
+    image: opencv_gst
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: tail -F a
+    network_mode: "host"
+    tty: true
+    restart: always
